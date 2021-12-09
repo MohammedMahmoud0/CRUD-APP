@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App JavaScript </title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="w-75 mx-auto mt-5 shadow rounded ">
+        <h1 class=" text-center py-3 fw-bold bg-light text-success">CRUD Project</h1>
+        <div class="w-75 mx-auto">
+            <div class="alert myAlert d-none  border-danger text-danger" role="alert">
+                <strong>please start with capital letter...</strong></div>
+              <div class="alert myAlert my-5 d-none text-danger border-danger" role="alert" id="lastAlert">
+                <strong>please enter all fields...</strong></div>
+        </div>
+        <div class="w-75 mx-auto">
+            <label for="productName">productName</label>
+            <input placeholder="Start With Capital Letter" class=" form-control mt-1" type="text" id="productName">
+        </div>
+        <div class="w-75 mx-auto">
+            <label for="productPrice">productPrice</label>
+            <input class=" form-control mt-1" type="number" id="productPrice">
+        </div>
+        <div class="w-75 mx-auto">
+            <label for="productCategory">productCategory</label>
+            <input class=" form-control mt-1" type="text" id="productCategory">
+        </div>
+        <div class="w-75 mx-auto">
+            <label for="productDesc">productDesc</label>
+            <textarea class=" form-control mt-1" id="productDesc"></textarea>
+        </div>
+        <div class="w-75 mx-auto">
+            <button id='mainBtn' class="btn btn-outline-info my-3">Add product</button>
+            <button onclick="updateProduct()" id='upBtn' class="btn btn-outline-info my-3 d-none">Update product</button>
+        </div>
+    </div>
+    <div class="w-50 mt-4 mx-auto">
+        <input placeholder="Search by Product Name" type="text" class=" form-control my-5" id='productSearch'>
+    </div>
+    <div class="w-75 mx-auto">
+        <table class=" table">
+            <thead>
+                <th>Index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id='tableBody'>
+
+            </tbody>
+
+        </table>
+    </div>
+
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+
+</html>
